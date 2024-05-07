@@ -22,11 +22,11 @@ public class MovieAIService {
         this.chatClient = chatClient;
     }
 
-    public List<String> getMovie(String subject) {
+    public List<String> getAboutMovie(String subject) {
         SystemMessage systemMessage = new SystemMessage("a useful chat bot from open ai");
         var outputParser = new ListOutputParser(new DefaultConversionService());
 
-        PromptTemplate promptTemplate = new PromptTemplate("Tell me a movie about {subject}");
+        PromptTemplate promptTemplate = new PromptTemplate("Tell me about movie {subject}");
         Prompt prompt = promptTemplate.create(Map.of("subject", subject));
         ChatResponse response = chatClient.call(prompt);
         return outputParser.parse(response.getResult().getOutput().getContent());

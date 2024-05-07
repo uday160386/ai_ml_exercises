@@ -23,6 +23,6 @@ public class MovieController {
 
     @GetMapping("/ai/chat")
     List<String> chat(@RequestParam String aboutMovie) {
-        return movieAIService.getMovie(aboutMovie);
+        return movieAIService.getAboutMovie(aboutMovie);
     }
 }
