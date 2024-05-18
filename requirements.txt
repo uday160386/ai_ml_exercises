@@ -1,0 +1,11 @@
+pandas
+matplotlib
+numpy
+keras
+scikit-learn
+sympy
+imageio
+openpyxl
+optuna
+mlxtend
+seaborn
